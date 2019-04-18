@@ -31,7 +31,7 @@ type VideoSrc struct {
 //创建视频封面返回id
 func CreatedImage(str string) (imgId int,err error){
 	img_id := ImageSrc{}
-	find := Db.Raw("insert into image_src(src_path) values(?) returning id",str).Scan(&img_id)
+	find := Db.Raw("insert into image_srcs(src_path) values(?) returning id",str).Scan(&img_id)
 	if err:= find.Error; err!=nil{
 		fmt.Println("创建失败",err)
 		return 0,err
