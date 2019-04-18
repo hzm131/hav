@@ -13,7 +13,7 @@ type Users struct {
 
 type Persons struct {
 	gorm.Model
-	Users Users `gorm:"FOREIGNKEY:UsersId;"json:"users_id"`
+	Users Users `gorm:"FOREIGNKEY:UsersId;"json:"users"`
 	UsersId int `gorm:"column:users_id;type:integer;not null"json:"users_id"`
 	Age int `gorm:"column:age;type:integer;"json:"age"` //年龄
 	Sex string `gorm:"column:sex;type:varchar;"json:"sex"` //性别

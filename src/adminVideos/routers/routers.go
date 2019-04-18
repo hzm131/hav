@@ -3,6 +3,7 @@ package routers
 import (
 	"adminVideos/routers/api"
 	"adminVideos/routers/api/v1"
+	"adminVideos/routers/api/v3"
 	"github.com/gin-gonic/gin"
 )
 
@@ -31,6 +32,13 @@ func InitRouter() *gin.Engine {
 	api2.Use(api.GetAuth)
 	{
 
+	}
+	api3 := r.Group("/api/v3")
+	api3.Use(api.GetAuth)
+	{
+		//上传接口
+		api3.POST("/upload/images",v3.UploadImages) //上传视频封面
+		api3.POST("/upload/videos",v3.UploadVideos) //上传视频
 	}
 
 

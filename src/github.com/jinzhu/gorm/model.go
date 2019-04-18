@@ -8,7 +8,8 @@ import "time"
 //    }
 type Model struct {
 	ID        int `gorm:"primary_key"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt *time.Time `sql:"index"`
+	CreatedAt time.Time `sql:"default:CURRENT_TIMESTAMP;"json:"created_at"`
+	UpdatedAt time.Time `sql:"type:timestamp;default:CURRENT_TIMESTAMP;"json:"updated_at"`
+	DeletedAt *time.Time `sql:"index"json:"deleted_at"`
 }
+// postgres不支持直接更新 需要触发器

@@ -18,7 +18,8 @@ func init(){
 		panic(err)
 	}
 	//创建表 自动迁移
-	Db.AutoMigrate(&Users{},&Persons{})
+	Db.AutoMigrate(&Users{},
+	&Persons{},&Videos{},&ImageSrc{},&VideoSrc{})
 }
 
 func CloseDB() {
