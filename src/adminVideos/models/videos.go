@@ -11,11 +11,22 @@ type Videos struct {
 	VideoSrcId int `gorm:"column:video_src_id;type:integer;"json:"video_src_id"validate:"required||integer"` //视频路径
 	VideoSrc VideoSrc  `gorm:"FOREIGNKEY:SrcId"json:"video_src"`
 
-	ImageSrcId int `gorm:"column:image_src_id;type:integer;"json:"image_src_id"validate:"required||integer"`
+	ImageSrcId int `gorm:"column:image_src_id;type:integer;"json:"image_src_id"validate:"required||integer"` //封面路径
 	ImageSrc ImageSrc `gorm:"FOREIGNKEY:ImageSrcId"json:"image_src"`
 
-	SecondaryId int `gorm:"column:secondary_id;type:integer;"json:"secondary_id"validate:"required||integer"`
+	SecondaryId int `gorm:"column:secondary_id;type:integer;"json:"secondary_id"validate:"required||integer"` //父类id
 	Secondary Secondary `gorm:"FOREIGNKEY:SecondaryId"json:"secondary"`
+
+
+	Type string `gorm:"column:type;type:varchar;"json:"type"validate:"required||string"` //视频类型
+
+	Area string  `gorm:"column:area;type:varchar;"json:"area"validate:"required||string"` //产地
+
+	Language string  `gorm:"column:language;type:varchar;"json:"language"validate:"required||string"` //语言
+
+	Released string `gorm:"column:released;type:varchar;"json:"released"validate:"required||string"` //上映日期
+
+	Updated string `gorm:"column:updated;type:varchar;"json:"updated"validate:"required||string"` //更新日期
 }
 
 //上传视频封面
