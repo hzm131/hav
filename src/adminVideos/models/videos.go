@@ -12,7 +12,10 @@ type Videos struct {
 	VideoSrc VideoSrc  `gorm:"FOREIGNKEY:SrcId"json:"video_src"`
 
 	ImageSrcId int `gorm:"column:image_src_id;type:integer;"json:"image_src_id"validate:"required||integer"`
-	ImageSrc ImageSrc `gorm:"FOREIGNKEY:ImageSrcId"json:"image_src_id"`
+	ImageSrc ImageSrc `gorm:"FOREIGNKEY:ImageSrcId"json:"image_src"`
+
+	SecondaryId int `gorm:"column:secondary_id;type:integer;"json:"secondary_id"validate:"required||integer"`
+	Secondary Secondary `gorm:"FOREIGNKEY:SecondaryId"json:"secondary"`
 }
 
 //上传视频封面

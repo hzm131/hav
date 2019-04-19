@@ -39,6 +39,9 @@ func InitRouter() *gin.Engine {
 		//上传接口
 		api3.POST("/upload/images",v3.UploadImages) //上传视频封面
 		api3.POST("/upload/videos",v3.UploadVideos) //上传视频
+
+		api3.POST("/class",v3.Class)
+		api3.POST("/secondary",v3.Secondary)
 	}
 
 
