@@ -97,3 +97,44 @@ func UpdateVideo(c *gin.Context){
 }
 
 
+//查询视频
+func QueryVideo(c *gin.Context){
+	limit := c.Request.URL.Query().Get("limit")
+	limitint,error := strconv.Atoi(limit)
+	if error != nil{
+		c.JSON(http.StatusOK, gin.H{
+			"status" :400,
+			"error": error,
+			"data":"url中id获取失败",
+		})
+		return
+	}
+	offset := c.Request.URL.Query().Get("offset")
+	offsetint,error := strconv.Atoi(offset)
+	if error != nil{
+		c.JSON(http.StatusOK, gin.H{
+			"status" :400,
+			"error": error,
+			"data":"url中id获取失败",
+		})
+		return
+	}
+
+	value,err := models.QueryVideo(limitint,offsetint)
+	if err != nil{
+		c.JSON(http.StatusOK, gin.H{
+			"status" :400,
+			"error": error,
+			"data":"查询有错误",
+		})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"status" :200,
+		"error": nil,
+		"data":value,
+	})
+}
+
+
+//注意在rows的时候需要将数据一个个的添加 row也是

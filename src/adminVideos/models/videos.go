@@ -77,20 +77,20 @@ func CreatedVideo(v Videos)(videoId int,err error){
 	video := Videos{}
 	create := Db.Raw(`insert into videos(name,video_src_id,image_src_id,
 secondary_id,area,language,released,updated,director,actor,score,plot,screenshot) values(?,?,?,?,?,?,?,?,?,?,?,?,?) returning id`,
-&v.Name,
-&v.VideoSrcId,
-&v.ImageSrcId,
-&v.SecondaryId,
-&v.Area,
-&v.Language,
-&v.Released,
-&v.Updated,
-&v.Director,
-&v.Actor,
-&v.Score,
-&v.Plot,
-&v.Screenshot,
-).Scan(&video)
+		&v.Name,
+		&v.VideoSrcId,
+		&v.ImageSrcId,
+		&v.SecondaryId,
+		&v.Area,
+		&v.Language,
+		&v.Released,
+		&v.Updated,
+		&v.Director,
+		&v.Actor,
+		&v.Score,
+		&v.Plot,
+		&v.Screenshot,
+	).Scan(&video)
 	if err:= create.Error; err!=nil{
 		fmt.Println("创建失败",err)
 		return 0,err
@@ -128,4 +128,51 @@ secondary_id=?,area=?,language=?,released=?,updated=?,director=?,actor=?,score=?
 		return false
 	}
 	return true
+}
+
+type queryVideo struct {
+	Name string `json:"name"`
+	Area string `json:"area"`
+	Language string `json:"language"`
+	Released string `json:"released"`
+	Updated string `json:"updated"`
+	Director string `json:"director"`
+	Actor string `json:"actor"`
+	Score string `json:"score"`
+	Plot string `json:"plot"`
+	Screenshot string `json:"1,2,3"`
+	TypeName string `json:"type_name"`
+	OneName string `json:"one_name"`
+}
+//查询视频
+func QueryVideo(limit,offset int) (qv []queryVideo,err error){
+	fmt.Println("limit:",limit)
+	fmt.Println("offset:",offset)
+	rows,err := Db.Raw(`select name,area,language,released,updated,director,actor,score,
+       plot,screenshot,type_name,one_name from videos inner join image_srcs on videos.image_src_id = image_srcs.id
+         inner join video_srcs on videos.video_src_id = video_srcs.id inner join secondaries
+           on videos.secondary_id = secondaries.id inner join classes on
+			secondaries.classes_id = classes.id limit ? offset ?`,limit,offset).Rows()
+	if err != nil {
+		return
+	}
+	defer rows.Close()
+	for rows.Next(){
+		v:= queryVideo{}
+		rows.Scan(&v.Name,
+			&v.Area,
+			&v.Language,
+			&v.Released,
+			&v.Updated,
+			&v.Director,
+			&v.Actor,
+			&v.Score,
+			&v.Plot,
+			&v.Screenshot,
+			&v.TypeName,
+			&v.OneName,
+		)
+		qv = append(qv,v)
+	}
+	return
 }
