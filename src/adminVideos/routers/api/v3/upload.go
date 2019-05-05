@@ -42,7 +42,7 @@ func UploadImages(c *gin.Context){
 		return
 	}
 	//封面表添加
-	id,err := models.CreatedImage("http://192.168.2.219:8000/images/"+filename)
+	id,err := models.CreatedImage("http://127.0.0.1:3000/images/"+filename)
 	if err != nil{
 		c.JSON(http.StatusOK, gin.H{
 			"status" :400,
@@ -93,7 +93,7 @@ func UploadVideos(c *gin.Context){
 		return
 	}
 	// 返回视频路径id
-	id,err := models.CreatedVideoSrc("http://192.168.2.219:8000/videos/"+filename)
+	id,err := models.CreatedVideoSrc("http://127.0.0.1:3000/videos/"+filename)
 	if err != nil{
 		c.JSON(http.StatusOK, gin.H{
 			"status" :400,

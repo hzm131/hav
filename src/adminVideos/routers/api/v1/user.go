@@ -31,13 +31,13 @@ func Login(c *gin.Context){
 		}
 		return
 	}
-	PersonsId,err := models.FindId(user)
-	if err != nil || PersonsId == 0 {
+	PersonsId,Role,err := models.FindId(user)
+	if err != nil || PersonsId == 0 || Role.Name == "" {
 		fmt.Errorf("查询id失败",err)
 		return
 	}
 
-	str,err := jwt.CreateJWT(PersonsId)
+	str,err := jwt.CreateJWT(PersonsId,Role)
 	if err != nil {
 		fmt.Errorf("失败")
 		return
@@ -46,7 +46,7 @@ func Login(c *gin.Context){
 		"status" :200,
 		"error": nil,
 		"data": str,
-		"persons_id":PersonsId,
+		"role":Role.Name,
 	})
 }
 
@@ -84,7 +84,16 @@ func Registered(c *gin.Context){
 	}
 	fmt.Println(PersonsId)
 
-	str,err := jwt.CreateJWT(PersonsId) //返回完整token
+	role,err := models.FindRole(PersonsId)
+	if err != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"status" :400,
+			"error": err,
+			"data":"生成角色失败",
+		})
+		return
+	}
+	str,err := jwt.CreateJWT(PersonsId,role) //返回完整token
 	if err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"status" :200,
@@ -97,7 +106,7 @@ func Registered(c *gin.Context){
 	c.JSON(http.StatusOK, gin.H{
 		"status" :200,
 		"error": nil,
-		"data": str,
-		"persons_id":PersonsId,
+		"data": str, //jwt
+		"role":role.Name, //用户角色
 	})
 }

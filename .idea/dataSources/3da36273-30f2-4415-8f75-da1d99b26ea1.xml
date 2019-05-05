@@ -9,14 +9,18 @@
       <Comment>default administrative connection database</Comment>
       <StateNumber>567</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1513</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1722</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|17854|17856|1
-sequence|table|17840|17842|1
-sequence|table|17868|17870|1
-sequence|table|17882|17884|1
-sequence|table|17896|17898|1
+      <Relations>sequence|table|18384|18386|1
+sequence|table|18398|18400|1
+sequence|table|18412|18414|1
+sequence|table|18426|18428|1
+sequence|table|18440|18442|1
+sequence|table|18454|18456|1
+sequence|table|18468|18470|1
+sequence|table|18482|18484|1
+sequence|table|18496|18498|1
 </Relations>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -102,7 +106,7 @@ sequence|table|17896|17898|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1514</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1731</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -170,378 +174,787 @@ sequence|table|17896|17898|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="26" parent="17" name="image_srcs_id_seq">
-      <ObjectId>17882</ObjectId>
+    <sequence id="26" parent="17" name="comments_id_seq">
+      <ObjectId>18507</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1498</StateNumber>
+      <StateNumber>1726</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="27" parent="17" name="persons_id_seq">
-      <ObjectId>17854</ObjectId>
+    <sequence id="27" parent="17" name="classes_id_seq">
+      <ObjectId>18454</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1717</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="28" parent="17" name="users_id_seq">
-      <ObjectId>17840</ObjectId>
+    <sequence id="28" parent="17" name="image_srcs_id_seq">
+      <ObjectId>18426</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1492</StateNumber>
+      <StateNumber>1713</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="29" parent="17" name="video_srcs_id_seq">
-      <ObjectId>17896</ObjectId>
+    <sequence id="29" parent="17" name="persons_id_seq">
+      <ObjectId>18398</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1500</StateNumber>
+      <StateNumber>1709</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="30" parent="17" name="videos_id_seq">
-      <ObjectId>17868</ObjectId>
+    <sequence id="30" parent="17" name="role_users_id_seq">
+      <ObjectId>18496</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1724</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="31" parent="17" name="image_srcs">
-      <ObjectId>17884</ObjectId>
+    <sequence id="31" parent="17" name="roles_id_seq">
+      <ObjectId>18482</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1498</StateNumber>
-    </table>
-    <table id="32" parent="17" name="persons">
-      <ObjectId>17856</ObjectId>
+      <StateNumber>1722</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="32" parent="17" name="secondaries_id_seq">
+      <ObjectId>18468</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1494</StateNumber>
-    </table>
-    <table id="33" parent="17" name="users">
-      <ObjectId>17842</ObjectId>
+      <StateNumber>1719</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="33" parent="17" name="users_id_seq">
+      <ObjectId>18384</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1492</StateNumber>
-    </table>
-    <table id="34" parent="17" name="video_srcs">
-      <ObjectId>17898</ObjectId>
+      <StateNumber>1707</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="17" name="video_srcs_id_seq">
+      <ObjectId>18440</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1500</StateNumber>
-    </table>
-    <table id="35" parent="17" name="videos">
-      <ObjectId>17870</ObjectId>
+      <StateNumber>1715</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="35" parent="17" name="videos_id_seq">
+      <ObjectId>18412</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="36" parent="17" name="classes">
+      <ObjectId>18456</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1717</StateNumber>
     </table>
-    <column id="36" parent="31" name="id">
+    <table id="37" parent="17" name="comments">
+      <ObjectId>18509</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1726</StateNumber>
+    </table>
+    <table id="38" parent="17" name="image_srcs">
+      <ObjectId>18428</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1713</StateNumber>
+    </table>
+    <table id="39" parent="17" name="persons">
+      <ObjectId>18400</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1709</StateNumber>
+    </table>
+    <table id="40" parent="17" name="role_users">
+      <ObjectId>18498</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1724</StateNumber>
+    </table>
+    <table id="41" parent="17" name="roles">
+      <ObjectId>18484</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1722</StateNumber>
+    </table>
+    <table id="42" parent="17" name="secondaries">
+      <ObjectId>18470</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1719</StateNumber>
+    </table>
+    <table id="43" parent="17" name="users">
+      <ObjectId>18386</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1707</StateNumber>
+    </table>
+    <table id="44" parent="17" name="video_srcs">
+      <ObjectId>18442</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1715</StateNumber>
+    </table>
+    <table id="45" parent="17" name="videos">
+      <ObjectId>18414</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1711</StateNumber>
+    </table>
+    <column id="46" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1498</StateNumber>
-      <DefaultExpression>nextval(&apos;image_srcs_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>1717</StateNumber>
+      <DefaultExpression>nextval(&apos;classes_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="37" parent="31" name="created_at">
+    <column id="47" parent="36" name="created_at">
       <Position>2</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1498</StateNumber>
+      <StateNumber>1717</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1184</TypeId>
     </column>
-    <column id="38" parent="31" name="updated_at">
+    <column id="48" parent="36" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1498</StateNumber>
+      <StateNumber>1717</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1114</TypeId>
     </column>
-    <column id="39" parent="31" name="deleted_at">
+    <column id="49" parent="36" name="deleted_at">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1498</StateNumber>
+      <StateNumber>1717</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="40" parent="31" name="src_path">
+    <column id="50" parent="36" name="name">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1498</StateNumber>
+      <StateNumber>1717</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="41" parent="31" name="image_srcs_pkey">
-      <ObjectId>17893</ObjectId>
-      <StateNumber>1498</StateNumber>
+    <index id="51" parent="36" name="classes_pkey">
+      <ObjectId>18465</ObjectId>
+      <StateNumber>1717</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="42" parent="31" name="idx_image_srcs_deleted_at">
-      <ObjectId>17895</ObjectId>
-      <StateNumber>1499</StateNumber>
+    <index id="52" parent="36" name="idx_classes_deleted_at">
+      <ObjectId>18467</ObjectId>
+      <StateNumber>1718</StateNumber>
       <ColNames>deleted_at</ColNames>
     </index>
-    <key id="43" parent="31" name="image_srcs_pkey">
-      <ObjectId>17894</ObjectId>
-      <StateNumber>1498</StateNumber>
+    <key id="53" parent="36" name="classes_pkey">
+      <ObjectId>18466</ObjectId>
+      <StateNumber>1717</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>classes_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1726</StateNumber>
+      <DefaultExpression>nextval(&apos;comments_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="55" parent="37" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="56" parent="37" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="57" parent="37" name="deleted_at">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="58" parent="37" name="video_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="37" name="content">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="60" parent="37" name="person_id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="61" parent="37" name="to_person_id">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1726</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="62" parent="37" name="comments_pkey">
+      <ObjectId>18518</ObjectId>
+      <StateNumber>1726</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="37" name="idx_comments_deleted_at">
+      <ObjectId>18520</ObjectId>
+      <StateNumber>1727</StateNumber>
+      <ColNames>deleted_at</ColNames>
+    </index>
+    <key id="64" parent="37" name="comments_pkey">
+      <ObjectId>18519</ObjectId>
+      <StateNumber>1726</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>comments_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="65" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1713</StateNumber>
+      <DefaultExpression>nextval(&apos;image_srcs_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="66" parent="38" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1713</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="67" parent="38" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1713</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="68" parent="38" name="deleted_at">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1713</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="69" parent="38" name="src_path">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1713</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="70" parent="38" name="image_srcs_pkey">
+      <ObjectId>18437</ObjectId>
+      <StateNumber>1713</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="71" parent="38" name="idx_image_srcs_deleted_at">
+      <ObjectId>18439</ObjectId>
+      <StateNumber>1714</StateNumber>
+      <ColNames>deleted_at</ColNames>
+    </index>
+    <key id="72" parent="38" name="image_srcs_pkey">
+      <ObjectId>18438</ObjectId>
+      <StateNumber>1713</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>image_srcs_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="44" parent="32" name="id">
+    <column id="73" parent="39" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <DefaultExpression>nextval(&apos;persons_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="45" parent="32" name="created_at">
+    <column id="74" parent="39" name="created_at">
       <Position>2</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1184</TypeId>
     </column>
-    <column id="46" parent="32" name="updated_at">
+    <column id="75" parent="39" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1114</TypeId>
     </column>
-    <column id="47" parent="32" name="deleted_at">
+    <column id="76" parent="39" name="deleted_at">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="48" parent="32" name="users_id">
+    <column id="77" parent="39" name="users_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="49" parent="32" name="age">
+    <column id="78" parent="39" name="age">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="50" parent="32" name="sex">
+    <column id="79" parent="39" name="sex">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="51" parent="32" name="birthday">
+    <column id="80" parent="39" name="birthday">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="32" name="nick_name">
+    <column id="81" parent="39" name="nick_name">
       <Position>9</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1494</StateNumber>
+      <StateNumber>1709</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="53" parent="32" name="vip">
-      <Position>10</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>1494</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <index id="54" parent="32" name="persons_pkey">
-      <ObjectId>17865</ObjectId>
-      <StateNumber>1494</StateNumber>
+    <index id="82" parent="39" name="persons_pkey">
+      <ObjectId>18409</ObjectId>
+      <StateNumber>1709</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="55" parent="32" name="idx_persons_deleted_at">
-      <ObjectId>17867</ObjectId>
-      <StateNumber>1495</StateNumber>
+    <index id="83" parent="39" name="idx_persons_deleted_at">
+      <ObjectId>18411</ObjectId>
+      <StateNumber>1710</StateNumber>
       <ColNames>deleted_at</ColNames>
     </index>
-    <key id="56" parent="32" name="persons_pkey">
-      <ObjectId>17866</ObjectId>
-      <StateNumber>1494</StateNumber>
+    <key id="84" parent="39" name="persons_pkey">
+      <ObjectId>18410</ObjectId>
+      <StateNumber>1709</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>persons_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="57" parent="33" name="id">
+    <column id="85" parent="40" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1492</StateNumber>
-      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>1724</StateNumber>
+      <DefaultExpression>nextval(&apos;role_users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="58" parent="33" name="created_at">
+    <column id="86" parent="40" name="created_at">
       <Position>2</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1492</StateNumber>
+      <StateNumber>1724</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1184</TypeId>
     </column>
-    <column id="59" parent="33" name="updated_at">
+    <column id="87" parent="40" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1492</StateNumber>
+      <StateNumber>1724</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1114</TypeId>
     </column>
-    <column id="60" parent="33" name="deleted_at">
+    <column id="88" parent="40" name="deleted_at">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1492</StateNumber>
+      <StateNumber>1724</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="61" parent="33" name="username">
+    <column id="89" parent="40" name="role_id">
       <Position>5</Position>
-      <DataType>varchar|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>1492</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1724</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="62" parent="33" name="password">
+    <column id="90" parent="40" name="person_id">
       <Position>6</Position>
-      <DataType>varchar|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>1492</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1724</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <index id="63" parent="33" name="users_pkey">
-      <ObjectId>17851</ObjectId>
-      <StateNumber>1492</StateNumber>
+    <index id="91" parent="40" name="role_users_pkey">
+      <ObjectId>18504</ObjectId>
+      <StateNumber>1724</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="64" parent="33" name="idx_users_deleted_at">
-      <ObjectId>17853</ObjectId>
-      <StateNumber>1493</StateNumber>
+    <index id="92" parent="40" name="idx_role_users_deleted_at">
+      <ObjectId>18506</ObjectId>
+      <StateNumber>1725</StateNumber>
       <ColNames>deleted_at</ColNames>
     </index>
-    <key id="65" parent="33" name="users_pkey">
-      <ObjectId>17852</ObjectId>
-      <StateNumber>1492</StateNumber>
+    <key id="93" parent="40" name="role_users_pkey">
+      <ObjectId>18505</ObjectId>
+      <StateNumber>1724</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>role_users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="94" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1722</StateNumber>
+      <DefaultExpression>nextval(&apos;roles_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="95" parent="41" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1722</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="96" parent="41" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1722</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="97" parent="41" name="deleted_at">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1722</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="98" parent="41" name="name">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1722</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="99" parent="41" name="roles_pkey">
+      <ObjectId>18493</ObjectId>
+      <StateNumber>1722</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="100" parent="41" name="idx_roles_deleted_at">
+      <ObjectId>18495</ObjectId>
+      <StateNumber>1723</StateNumber>
+      <ColNames>deleted_at</ColNames>
+    </index>
+    <key id="101" parent="41" name="roles_pkey">
+      <ObjectId>18494</ObjectId>
+      <StateNumber>1722</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>roles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="102" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1719</StateNumber>
+      <DefaultExpression>nextval(&apos;secondaries_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="103" parent="42" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1719</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="104" parent="42" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1719</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="105" parent="42" name="deleted_at">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1719</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="106" parent="42" name="name">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1719</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="107" parent="42" name="classes_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1719</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="108" parent="42" name="secondaries_pkey">
+      <ObjectId>18479</ObjectId>
+      <StateNumber>1719</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="109" parent="42" name="idx_secondaries_deleted_at">
+      <ObjectId>18481</ObjectId>
+      <StateNumber>1720</StateNumber>
+      <ColNames>deleted_at</ColNames>
+    </index>
+    <key id="110" parent="42" name="secondaries_pkey">
+      <ObjectId>18480</ObjectId>
+      <StateNumber>1719</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>secondaries_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="111" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1707</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="112" parent="43" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1707</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="113" parent="43" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1707</StateNumber>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="114" parent="43" name="deleted_at">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1707</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="115" parent="43" name="username">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1707</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="116" parent="43" name="password">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1707</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="117" parent="43" name="users_pkey">
+      <ObjectId>18395</ObjectId>
+      <StateNumber>1707</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="118" parent="43" name="idx_users_deleted_at">
+      <ObjectId>18397</ObjectId>
+      <StateNumber>1708</StateNumber>
+      <ColNames>deleted_at</ColNames>
+    </index>
+    <key id="119" parent="43" name="users_pkey">
+      <ObjectId>18396</ObjectId>
+      <StateNumber>1707</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="66" parent="34" name="id">
+    <column id="120" parent="44" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1500</StateNumber>
+      <StateNumber>1715</StateNumber>
       <DefaultExpression>nextval(&apos;video_srcs_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="67" parent="34" name="created_at">
+    <column id="121" parent="44" name="created_at">
       <Position>2</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1500</StateNumber>
+      <StateNumber>1715</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1184</TypeId>
     </column>
-    <column id="68" parent="34" name="updated_at">
+    <column id="122" parent="44" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1500</StateNumber>
+      <StateNumber>1715</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1114</TypeId>
     </column>
-    <column id="69" parent="34" name="deleted_at">
+    <column id="123" parent="44" name="deleted_at">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1500</StateNumber>
+      <StateNumber>1715</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="70" parent="34" name="src_path">
+    <column id="124" parent="44" name="src_path">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1500</StateNumber>
+      <StateNumber>1715</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="71" parent="34" name="video_srcs_pkey">
-      <ObjectId>17907</ObjectId>
-      <StateNumber>1500</StateNumber>
+    <index id="125" parent="44" name="video_srcs_pkey">
+      <ObjectId>18451</ObjectId>
+      <StateNumber>1715</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="72" parent="34" name="idx_video_srcs_deleted_at">
-      <ObjectId>17909</ObjectId>
-      <StateNumber>1501</StateNumber>
+    <index id="126" parent="44" name="idx_video_srcs_deleted_at">
+      <ObjectId>18453</ObjectId>
+      <StateNumber>1716</StateNumber>
       <ColNames>deleted_at</ColNames>
     </index>
-    <key id="73" parent="34" name="video_srcs_pkey">
-      <ObjectId>17908</ObjectId>
-      <StateNumber>1500</StateNumber>
+    <key id="127" parent="44" name="video_srcs_pkey">
+      <ObjectId>18452</ObjectId>
+      <StateNumber>1715</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>video_srcs_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="74" parent="35" name="id">
+    <column id="128" parent="45" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <DefaultExpression>nextval(&apos;videos_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="75" parent="35" name="created_at">
+    <column id="129" parent="45" name="created_at">
       <Position>2</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1184</TypeId>
     </column>
-    <column id="76" parent="35" name="updated_at">
+    <column id="130" parent="45" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1114</TypeId>
     </column>
-    <column id="77" parent="35" name="deleted_at">
+    <column id="131" parent="45" name="deleted_at">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="78" parent="35" name="name">
+    <column id="132" parent="45" name="name">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="79" parent="35" name="video_src_id">
+    <column id="133" parent="45" name="video_src_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="80" parent="35" name="image_src_id">
+    <column id="134" parent="45" name="image_src_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1496</StateNumber>
+      <StateNumber>1711</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="81" parent="35" name="videos_pkey">
-      <ObjectId>17879</ObjectId>
-      <StateNumber>1496</StateNumber>
+    <column id="135" parent="45" name="secondary_id">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="136" parent="45" name="area">
+      <Position>9</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="137" parent="45" name="language">
+      <Position>10</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="138" parent="45" name="released">
+      <Position>11</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="139" parent="45" name="updated">
+      <Position>12</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="140" parent="45" name="director">
+      <Position>13</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="141" parent="45" name="actor">
+      <Position>14</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="142" parent="45" name="score">
+      <Position>15</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="143" parent="45" name="plot">
+      <Position>16</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="144" parent="45" name="screenshot">
+      <Position>17</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="145" parent="45" name="videos_pkey">
+      <ObjectId>18423</ObjectId>
+      <StateNumber>1711</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="82" parent="35" name="idx_videos_deleted_at">
-      <ObjectId>17881</ObjectId>
-      <StateNumber>1497</StateNumber>
+    <index id="146" parent="45" name="idx_videos_deleted_at">
+      <ObjectId>18425</ObjectId>
+      <StateNumber>1712</StateNumber>
       <ColNames>deleted_at</ColNames>
     </index>
-    <key id="83" parent="35" name="videos_pkey">
-      <ObjectId>17880</ObjectId>
-      <StateNumber>1496</StateNumber>
+    <key id="147" parent="45" name="videos_pkey">
+      <ObjectId>18424</ObjectId>
+      <StateNumber>1711</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>videos_pkey</UnderlyingIndexName>
       <Primary>1</Primary>

@@ -27,6 +27,7 @@ type StandardClaims struct {
 	NotBefore int64  `json:"nbf,omitempty"`
 	Subject   string `json:"sub,omitempty"`
 	PersonsId  int  `json:"persons_id,omitempty"`
+	Role  string  `json:"role,omitempty"`
 }
 /*
 1. aud 标识token的接收者.

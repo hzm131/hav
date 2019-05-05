@@ -10,5 +10,5 @@ import (
 func main(){
 	r := routers.InitRouter()
 
-	r.Run("192.168.2.219:8000")
+	r.Run(":3000")
 }

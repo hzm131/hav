@@ -1,6 +1,7 @@
 package jwt
 
 import (
+	"adminVideos/models"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
@@ -93,15 +94,17 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjI5NTg5MTA4MDYsImlzcyI6InRlc3QiLCJ
 }*/
 var mySigningKey = []byte("hzwy23")
 //创建令牌
-func CreateJWT(id int) (str string,err error){
+func CreateJWT(id int,role models.Role) (str string,err error){
 
 	// 创建声明 就是设置token的一些东西
 	claims := &jwt.StandardClaims{
 		NotBefore: int64(time.Now().Unix() - 1000), //token信息生效时间.这个值可以不设置,但是设定后,一定要大于当前Unix UTC,否则token将会延迟生效.
 		ExpiresAt: int64(time.Now().Unix() + 1000), //过期时间.通常与Unix UTC时间做对比过期后token无效
 		Issuer:    "test", //是签名的发行者
-		PersonsId:id,
+		PersonsId:id, // 用户id
+		Role:role.Name, //用户角色
 	}
+	fmt.Println("rolerole:",role.Name)
 	//创建签名 第一个参数是算法 第二个参数是配置
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 
@@ -131,8 +134,11 @@ func ParseToken(c *gin.Context,str string){
 				fmt.Println("HS256的token解析错误，err:", err)
 				return
 			}
-			personsId :=int(claims["persons_id"].(float64))
+			personsId := int(claims["persons_id"].(float64))
+			role := claims["role"]
+			fmt.Println("role",role)
 			c.Set("persons_id",personsId)
+			c.Set("role",role)
 			c.Next()
 		} else {
 			/*c.Writer.WriteHeader(http.StatusUnauthorized)

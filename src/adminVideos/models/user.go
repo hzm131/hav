@@ -19,26 +19,42 @@ type Persons struct {
 	Sex string `gorm:"column:sex;type:varchar;"json:"sex"` //性别
 	Birthday string `gorm:"column:birthday;type:varchar;"json:"birthday"` //生日
 	NickName string  `gorm:"column:nick_name;type:varchar;"json:"nick_name"` //昵称
-	Vip int `gorm:"column:vip;type:integer;"json:"vip"`  //会员
+
+
 }
 
 
-func FindId(user Users) (int,error) {
+func FindId(user Users) (PersonsId int,role Role,err error) {
 	//根据用户名 密码查询用户 将查询到的结果封装在user结构中
 	query:= Db.Raw("select id from users where username=? and password=? limit 1",&user.UserName,&user.PassWord).Scan(&user)
-	if err:=query.Error; err!=nil{
+	if err = query.Error; err!=nil{
 		fmt.Println("用户名或密码有问题",err)
-		return 0,err
+		return
 	}
 	id := user.ID
 	var person Persons
 	per := Db.Raw("SELECT id FROM persons WHERE users_id = ?",&id).Scan(&person)
-	if err:=per.Error;err!=nil{
-		fmt.Println("查询失败")
-		return 0,err
+	if err = per.Error;err!=nil{
+		fmt.Println("PersonsId查询失败")
+		return
 	}
-	PersonsId := person.ID
-	return PersonsId,nil
+	PersonsId = person.ID
+
+	role_users := RoleUser{}
+	find := Db.Raw("select role_id from role_users where role_users.person_id=?",PersonsId).Scan(&role_users)
+	if err =find.Error;err!=nil{
+		fmt.Println("role_id查询失败")
+		return
+	}
+	role_id := role_users.RoleId
+
+	fmt.Println("role_id",role_id)
+	findRole := Db.Raw("select name from roles where id=?",role_id).Scan(&role)
+	if err = findRole.Error;err!=nil{
+		fmt.Println("name查询失败")
+		return
+	}
+	return
 }
 
 //创建数据

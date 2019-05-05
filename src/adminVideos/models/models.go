@@ -19,7 +19,8 @@ func init(){
 	}
 	//创建表 自动迁移
 	Db.AutoMigrate(&Users{},
-	&Persons{},&Videos{},&ImageSrc{},&VideoSrc{},&Classes{},&Secondary{})
+	&Persons{},&Videos{},&ImageSrc{},&VideoSrc{},&Classes{},&Secondary{},&Role{},&RoleUser{},&Comments{})
+	createdRole()
 }
 
 func CloseDB() {
