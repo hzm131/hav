@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="667bee3a-b599-48cf-8e66-9ee749c87ffa" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/adminVideos/routers/api/v3/video.go" afterDir="false" />
+=======
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3da36273-30f2-4415-8f75-da1d99b26ea1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3da36273-30f2-4415-8f75-da1d99b26ea1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3da36273-30f2-4415-8f75-da1d99b26ea1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3da36273-30f2-4415-8f75-da1d99b26ea1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -127,8 +130,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminVideos/main.go">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="264">
               <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+=======
+            <state relative-caret-position="473">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
             </state>
           </provider>
         </entry>
@@ -136,17 +144,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminVideos/routers/routers.go">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="350">
               <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+=======
+            <state relative-caret-position="66">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="e#14#47#0" expanded="true" />
+              </folding>
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/adminVideos/models/classes.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-297" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminVideos/routers/api/v3/upload.go">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="198">
               <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+=======
+            <state relative-caret-position="2739">
+              <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
               <folding>
                 <element signature="n#!!block;n#UploadImages#0" />
                 <element signature="n#!!block;n#UploadVideos#0" />
@@ -158,12 +186,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminVideos/models/models.go">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="90">
               <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+=======
+            <state relative-caret-position="798">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+              <folding>
+                <element signature="e#16#59#0" expanded="true" />
+                <element signature="n#!!block;n#CreatedImage#0" />
+                <element signature="n#!!block;n#CreatedVideoSrc#0" />
+              </folding>
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminVideos/middleware/jwt/jwt.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -204,6 +243,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -213,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:/Go" />
+  <component name="GOROOT" path="D:/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -232,6 +273,7 @@
         <option value="$PROJECT_DIR$/src/github.com/smokezl/govalidators/.gitignore" />
         <option value="$PROJECT_DIR$/src/github.com/smokezl/govalidators/LICENSE" />
         <option value="$PROJECT_DIR$/src/github.com/jinzhu/gorm/model.go" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/adminVideos/models/class.txt" />
         <option value="$PROJECT_DIR$/src/adminVideos/routers/api/v3/class.go" />
@@ -240,6 +282,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/adminVideos/routers/api/v3/video.go" />
+=======
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3da36273-30f2-4415-8f75-da1d99b26ea1/console.sql" />
+        <option value="$PROJECT_DIR$/src/adminVideos/routers/api/v3/upload.go" />
+        <option value="$PROJECT_DIR$/src/adminVideos/main.go" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
         <option value="$PROJECT_DIR$/src/adminVideos/models/videos.go" />
         <option value="$PROJECT_DIR$/src/adminVideos/routers/routers.go" />
         <option value="$PROJECT_DIR$/src/adminVideos/routers/api/v1/user.go" />
@@ -265,6 +312,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,6 +340,7 @@
               <item name="hav" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="adminVideos" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="middleware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,13 +350,19 @@
               <item name="adminVideos" type="462c0819:PsiDirectoryNode" />
               <item name="middleware" type="462c0819:PsiDirectoryNode" />
               <item name="jwt" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="PackagesPane" />
+=======
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,7 +378,7 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/githav/hav-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -353,6 +412,7 @@
       <workItem from="1555578866499" duration="2509000" />
       <workItem from="1555581402004" duration="1469000" />
       <workItem from="1555583842611" duration="4000" />
+<<<<<<< HEAD
       <workItem from="1555583851753" duration="1226000" />
       <workItem from="1555636658370" duration="9024000" />
       <workItem from="1555895654232" duration="838000" />
@@ -362,16 +422,30 @@
       <workItem from="1556085247428" duration="1013000" />
       <workItem from="1556608371648" duration="35000" />
       <workItem from="1557018609341" duration="1077000" />
+=======
+      <workItem from="1555583851753" duration="943000" />
+      <workItem from="1555676735977" duration="328000" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="39712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.16645244" />
+=======
+    <option name="totallyTimeSpent" value="16970000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -388,7 +462,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.43126684" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4143167" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.40700808" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -399,7 +477,7 @@
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.22043702" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.22014925" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16645244" />
@@ -478,6 +556,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="das://3da36273-30f2-4415-8f75-da1d99b26ea1/database/postgres/schema/public/table/video_srcs">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -499,6 +578,9 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://C:/Go/src/time/time.go" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
     <entry file="file://$PROJECT_DIR$/src/github.com/jinzhu/gorm/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -565,6 +647,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/adminVideos/routers/api/v3/video.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3366">
@@ -625,13 +708,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+=======
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3da36273-30f2-4415-8f75-da1d99b26ea1/console.sql" />
+    <entry file="das://3da36273-30f2-4415-8f75-da1d99b26ea1/database/postgres/schema/public/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3da36273-30f2-4415-8f75-da1d99b26ea1/database/postgres/schema/public/table/video_srcs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/adminVideos/routers/api/v3/upload.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="198">
           <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+=======
+        <state relative-caret-position="2739">
+          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
           <folding>
             <element signature="n#!!block;n#UploadImages#0" />
             <element signature="n#!!block;n#UploadVideos#0" />
@@ -639,6 +741,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/adminVideos/models/models.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -660,6 +763,38 @@
           <folding>
             <element signature="e#13#131#0" expanded="true" />
             <element signature="e#133#765#0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/adminVideos/routers/routers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/adminVideos/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#14#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/adminVideos/models/classes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/adminVideos/models/videos.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+          <folding>
+            <element signature="e#16#59#0" expanded="true" />
+            <element signature="n#!!block;n#CreatedImage#0" />
+            <element signature="n#!!block;n#CreatedVideoSrc#0" />
+>>>>>>> 1f71234280818950b8805706b9a2acdfed7fe285
           </folding>
         </state>
       </provider>
