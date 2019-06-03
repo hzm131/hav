@@ -33,6 +33,7 @@ type Videos struct {
 
 	Screenshot string  `gorm:"column:screenshot;type:varchar;"json:"screenshot"validate:"string"` // 截图
 
+	PersonId int `gorm:"column:person_id;type:integer;"json:"person_id"validate:"required||integer"` // 是谁上传的
 }
 
 //上传视频封面

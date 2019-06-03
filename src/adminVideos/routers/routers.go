@@ -43,9 +43,10 @@ func InitRouter() *gin.Engine {
 		api3.POST("/upload/images",v3.UploadImages) //上传视频封面
 		api3.POST("/upload/videos",v3.UploadVideos) //上传视频
 
-		api3.POST("/class",v3.Class)  //创建一级分类
-		api3.POST("/secondary",v3.Secondary)  //创建二级分类
+		api3.POST("/class",v3.Class)  //创建菜单
+
 		api3.POST("/video",v3.PostVideo)  //创建视频 创建和查询使用Raw和Raws
+
 		api3.PUT("/video/:id",v3.UpdateVideo)  //更新视频 更新的时候使用Db.Exec方法
 		api3.GET("/video",v3.QueryVideo)
 

@@ -9,26 +9,17 @@ import (
 type Classes struct {
 	gorm.Model
 	Name string `gorm:"column:name;type:varchar;"json:"name"validate:"required||string"`
+	Pid string `gorm:"column:pid;type:integer;"json:"pid"validate:"required||int"`
 }
 
 
-// 第二级表 电影种类 动漫种类
-type Secondary struct {
-	gorm.Model
-	Name string `gorm:"column:name;type:varchar;"json:"name"validate:"required||string"`
-	ClassesId int `gorm:"column:classes_id;type:integer;"json:"classes_id"validate:"required||integer"`
-}
-
-
-
-
-// 创建第一级分类
+// 创建菜单
 func CreatedClass(c Classes)(id int,err error){
 	cc := Classes{}
-	query := Db.Raw("insert into classes(name) values(?) returning id",&c.Name).Scan(&cc)
+	query := Db.Raw("insert into classes(name,pid) values(?,?) returning id",&c.Name,&c.Pid).Scan(&cc)
 	if err:=query.Error; err!=nil{
 		fmt.Println("创建失败",err)
-		return 0,err
+		return
 	}
 	id = cc.ID
 	return
@@ -36,14 +27,3 @@ func CreatedClass(c Classes)(id int,err error){
 
 
 
-//创建第二级分类
-func CreatedSecondary(c Secondary)(id int,err error){
-	cc := Secondary{}
-	query := Db.Raw("insert into secondaries(name,classes_id) values(?,?) returning id",&c.Name,&c.ClassesId).Scan(&cc)
-	if err:=query.Error; err!=nil{
-		fmt.Println("创建失败",err)
-		return 0,err
-	}
-	id = cc.ID
-	return
-}
